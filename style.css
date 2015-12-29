@@ -175,7 +175,7 @@ main a:hover, footer a:hover {
 		width: auto;
 	}
 }
-.site-header__branding:hover {
+.site-header__branding:hover, .site-header__branding:focus {
 	opacity: .7;
 }
 .site-header__logo {
@@ -231,7 +231,7 @@ main a:hover, footer a:hover {
 	font-family: 'Playfair Display', Georgia, Times, serif;
 	font-weight: 700;
 }
-.site-navigation__item:hover, .site-navigation__item.current {
+.site-navigation__item:hover, .site-navigation__item:focus, .site-navigation__item.current {
 	color: #beb6b0;
 }
 
@@ -304,4 +304,49 @@ main a:hover, footer a:hover {
 		height: auto;
 		margin: 0 0 1em 1em;
 	}
+}
+
+/*
+ * Contact page, forms
+ */
+
+label.hidden {
+	position: absolute !important;
+	clip: rect(0 0 0 0) !important;
+}
+input, textarea {
+	display: block;
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em;
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	line-height: 1.5;
+	border: 0;
+	border-radius: 4px;
+	box-shadow: 0 .5em 1.5em rgba(0,0,0,.1);
+	transition: box-shadow .4s linear;
+	-webkit-transition: box-shadow .4s linear;
+}
+input:focus, textarea:focus {
+	outline: none;
+	box-shadow: 0 .5em 1.5em rgba(0,0,0,.3);
+}
+textarea {
+	min-height: 8em;
+}
+.button {
+	display: inline-block;
+	margin-top: .5em;
+	padding: .3em 1.1em .3em 1em;
+	font-style: italic;
+	font-size: 1.1em;
+	letter-spacing: 0;
+	color: #fff;
+	background-color: #beb6b0;
+	border-radius: 4px;
+	transition: background-color .4s linear;
+	-webkit-transition: background-color .4s linear;
+}
+.button:hover, .button:focus {
+	background-color: #66615e;
 }
