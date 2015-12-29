@@ -244,8 +244,32 @@ main a:hover, footer a:hover {
 	font-size: .9em;
 	color: #beb6b0;
 }
-.site-footer__links {
-	text-align: right;
+@media (max-width: 800px) {
+	.site-footer {
+		text-align: center;
+	}
+}
+.site-footer__links img {
+	height: 75px;
+	width: auto;
+}
+.site-footer__links a {
+	opacity: .5;
+}
+.site-footer__links a:hover, .site-footer__links a:focus {
+	opacity: 1;
+}
+@media (min-width: 800px) {
+	.site-footer__links {
+		float: right;
+		text-align: right;
+	}
+	.site-footer__links img {
+		height: 4em;
+	}
+	.site-footer__copy {
+		padding-top: 2.7em;
+	}
 }
 
 /*
@@ -277,8 +301,10 @@ main a:hover, footer a:hover {
 .home__featured-music {
 	height: 315px;
 }
-.home__youtube-channel {
-	text-align: right;
+@media (min-width: 800px) {
+	.home__youtube-channel {
+		text-align: right;
+	}
 }
 
 /*
@@ -320,6 +346,7 @@ input, textarea {
 	margin: 1em auto;
 	padding: 1em;
 	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-size: inherit;
 	line-height: 1.5;
 	border: 0;
 	border-radius: 4px;
