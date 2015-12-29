@@ -19,9 +19,6 @@
             }); 
             
             base.$nav.on("click", "li > a", function() {
-				
-				console.log(base.$nav);
-				console.log(base.$el);
 
                 // Figure out current list via CSS class
                 var curList = base.$nav.find("a.current").attr("href").substring(1),
@@ -65,49 +62,53 @@
                 }   
 
                 // Don't behave like a regular link
-                // Stop propegation and bubbling
+                // Stop propagation and bubbling
                 return false;
             });
             
         };
         base.init();
 
-        // check for window.state, if exists then activate
-        if(history.state && history.state.length !==0){
-            if("organictabsState" in history.state){ // check for the organictabsState key
-                
-                // pull back in all of the var declarations so that they're accessible at start
-                curList = base.$nav.find("a.current").attr("href").substring(1);
-                stateID = history.state.organictabsState;
-                $allListWrap = base.$el.find(".list-wrap"),
-                curListHeight = $allListWrap.height();
-                $allListWrap.height(curListHeight);
-
-                if (history.state.organictabsState != curList) {
-
-                                            
-                    // Fade out current list
-                    base.$el.find("#"+curList).fadeOut("fast", function() {
-                        
-                        // Fade in new list on callback
-                        base.$el.find("#"+stateID).fadeIn("fast");
-                        
-                        // Adjust outer wrapper to fit new list snuggly
-                        var newHeight = base.$el.find("#"+stateID).height();
-                        $allListWrap.animate({
-                            height: newHeight
-                        });
-                        
-                        // Cycle through nav options, add class=current to organictabsState and remove from others
-                        base.$nav.find("li a").each(function(){
-                            $(this).attr("href") === "#" + stateID ? $(this).addClass("current") : $(this).removeClass("current");
-                        });
-                            
-                    });
-                }
-            }
-        }
+		// If someone loads the page with a tab query, show that tab
+		if (getUrlParameter("tab")) {
+			var currentTab = getUrlParameter("tab");
+			var $correspondingSection = base.$el.find("#"+currentTab);
+			if ($correspondingSection.length) {
+				base.$el.find("section").hide();
+				$correspondingSection.show();
+				base.$nav.find("a").removeClass("current");
+				base.$nav.find("a[href='#" + currentTab + "']").addClass("current");
+			}
+		}
     };
+
+	// Add support for showing/hiding tabs on back/forward
+	window.onpopstate = function(event) {
+		var $el = $("#js-main");
+		var $nav = $("#js-nav");
+
+		var oldTab = $nav.find("a.current").attr("href").substring(1);
+		var currentTab = getUrlParameter("tab") || "home";
+		var $currentSection = $el.find("#"+currentTab);
+		var $allListWrap = $el.find(".list-wrap");
+
+		// Fade out current list
+		$el.find("#"+oldTab).fadeOut("fast", function() {
+
+			// Fade in new list on callback
+			$currentSection.fadeIn("fast");
+
+			// Adjust outer wrapper to fit new list snuggly
+			var newHeight = $currentSection.height();
+			$allListWrap.animate({
+				height: newHeight
+			});
+
+			// Update current indicator on nav links
+			$nav.find("a").removeClass("current");
+			$nav.find("a[href='#" + currentTab + "']").addClass("current");
+		});
+	}
 
     $.organicTabs.defaultOptions = {
         "speed": 300
@@ -118,5 +119,20 @@
             (new $.organicTabs(this, options));
         });
     };
+
+	// Function for getting params
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
+			}
+		}
+	};
 
 })(jQuery);
