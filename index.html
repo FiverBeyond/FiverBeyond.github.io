@@ -5,33 +5,172 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title></title>
+		<title>Witty Notes</title>
 
 		<!-- CSS -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700|Playfair+Display:700,700italic">
 		<link rel="stylesheet" href="style.css">
 
-		<!-- JavaScript -->
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="script.js"></script>
-
-		<!-- Favicons -->
+		<!-- Favicons
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"> -->
 		
 		<!-- OpenGraph -->
-		<meta property="og:title" content="">
-		<meta property="og:description" content="">
+		<meta property="og:title" content="Witty Notes">
+		<meta property="og:description" content="The personal site of Evan Witt, game and film composer">
 		<meta property="og:type" content="site">
 		<meta property="og:image" content="">
-		<meta property="og:url" content="">
-		<meta name="description" content="">
-		<meta name="twitter:site" content="">
-		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:url" content="http://www.wittynotes.com">
+		<meta name="description" content="The personal site of Evan Witt, game and film composer">
+		<meta name="twitter:site" content="@WittyNotes">
+		<meta name="twitter:card" content="summary">
 	</head>
 	<body>
+		<div class="container">
 
+			<!-- Header -->
+			<header class="site-header row">
+				<a class="site-header__branding col-one-third" href="/">
+					<img class="site-header__logo" src="images/logo.png" width="58" height="56" align="left" alt="">
+					<h1 class="site-header__title">
+						Evan Witt
+						<div class="site-header__subtitle">Game & Film Composer</div>
+					</h1>
+				</a>
 
+				<!-- Navigation menu -->
+				<nav class="site-navigation col-two-thirds">
+					<ul id="js-nav">
+						<li>
+							<a class="site-navigation__item current" href="#home">Home</a>
+						</li>
+						<li>
+							<a class="site-navigation__item" href="#demo">Demo Reel</a>
+						</li>
+						<li>
+							<a class="site-navigation__item" href="#about">About</a>
+						</li>
+						<li>
+							<a class="site-navigation__item" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
 
+			</header>
+			<main id="js-main">
+				<div class="list-wrap">
+
+					<!-- Homepage -->
+					<section id="home" class="row">
+						<div class="home__intro col-full">
+							I compose and mix MIDI orchestral tracks meant for narrative-focused video games and films.
+							<div class="home__intro-flourish">&#8472;</div>
+						</div>
+						<div class="col-two-thirds">
+							<h3>Featured Tracks</h3>
+							<iframe class="home__featured-music" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179947406&amp;color=beb6b0&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+						</div>
+						<div class="home__youtube-channel col-one-third">
+							<h3>Studies in Scoring</h3>
+							<p>Follow my YouTube series on the craft of film scoring.
+						</div>
+					</section>
+
+					<!-- Demo Reel -->
+					<section id="demo" class="row hide">
+						<div class="col-one-third">
+							<h4>Adventure</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179944317&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Action</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179944317&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Childrens</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179946142&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Ambience</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/102494497&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Comedy</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/102494775&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Horror</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179946643&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Puzzle</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/72983376&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Arrangements</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179943880&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+						<div class="col-one-third">
+							<h4>Vocals</h4>
+							<iframe class="demo__embed" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/179943775&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+						</div>
+					</section>
+
+					<!-- About -->
+					<section id="about" class="row hide">
+						<div class="col-full">
+							<h2>About.</h2>
+							<img class="about__photo" src="images/profile-photo.jpg" alt="Evan Witt" align="right">
+							<p>I was born February 12th, 1985, in Southern California (snow is still magic to me), and raised on a healthy diet of Eric Korngold, Rogers & Hammerstein, and John Williams. My favorite books include The Once And Future King, Dune, and Watership Down. As for video games, Riven and Starcraft were, shall we say, formative. I later moved to Snoqualmie, Washington, which was my Walden before I knew what Walden was.</p>
+							<p>Practicing piano all through my teens paid off when I auditioned for music school. I completed my under-graduate work at Brigham Young University in Provo, Utah, where I scored several student films and trained in piano performance, and also traveled for two years in Germany.</p>
+							<p>I graduated in 2010 with a double major in Music Composition and Computer Science (my favorite CS topics were Computer Theory and Algorithm Analysis). Since then, I've lost 65 pounds, completed my first marathon, and worked full time as an SDET for Microsoft. I'm currently living in Redmond, Washington, spending my time scoring game jam projects or short films, studying orchestration, and looking for bigger fish to fry.</p>
+						</div>
+
+						<div class="col-full">
+							<h2>Resume & Skills.</h2>
+						</div>
+						<div class="col-half">
+							<p>To download and view my full resume, <a href="docs/Witt_Resume.pdf" target="_blank">click here</a>.</p>
+						</div>
+						<div class="col-half">
+							<ul>
+								<li>2+ years of experience as an SDET using C#, C++, Python, and Java.</li>
+								<li>Part-time developer for Fixer Studios with Unity and Coco2ds experience.</li>
+								<li>Senior Writer at NewGameNetwork.com with 30+ published video game reviews.</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Contact -->
+					<section id="contact" class="row hide">
+						<div class="col-full">
+							<h2>Contact.</h2>
+							<p>Drop me a line if you're interested in working with me, if you're looking for a project quote, or if you just want to say hi.</p>
+						</div>
+					</section>
+
+				</div>					
+			</main>
+
+			<!-- Footer -->
+			<footer class="site-footer row">
+				<div class="site-footer__copy col-half">
+					&copy; 2015 Evan Witt
+				</div>
+				<div class="site-footer__links col-half">
+					Social Media links
+				</div>
+			</footer>
+		</div>
+		
+		<!-- Javascript -->
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="script.js"></script>
+		<script>
+		$(function() {
+			$("#js-main").organicTabs();
+		});
+		</script>
 	</body>
 </html>

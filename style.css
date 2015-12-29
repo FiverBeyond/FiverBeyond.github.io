@@ -1,0 +1,307 @@
+/*
+ * Resets
+ */
+html {
+	box-sizing: border-box;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+img, svg, video, audio, embed, object, iframe, canvas {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+main, details, summary, aside, figcaption, figure, header, footer, nav, menu, section, article {
+	display: block;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: color .4s linear, opacity .4s linear;
+	-webkit-transition: color .4s linear, opacity .4s linear;
+}
+button {
+	font: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	-webkit-font-smoothing: inherit;
+	letter-spacing: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	overflow: visible;
+}
+::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+input, select, textarea {
+	max-width: 100%;
+}
+textarea {
+	resize: vertical;
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+}
+
+/*
+ * Base
+ */
+
+body {
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-size: 90%;
+	letter-spacing: -.01em;
+	line-height: 1.6;
+	color: #383432;
+	background-color: #f5f2ed;
+	background-image: url('images/background.png');
+	background-position: center top;
+}
+
+@media (min-width: 900px) {
+	body {
+		font-size: 95%;
+	}
+}
+@media (min-width: 1200px) {
+	body {
+		font-size: 100%;
+	}
+}
+@media (min-width: 1550px) {
+	body {
+		font-size: 120%;
+	}
+}
+@media (min-width: 1900px) {
+	body {
+		font-size: 140%;
+	}
+}
+@media (min-width: 2200px) {
+	body {
+		font-size: 170%;
+	}
+}
+
+/*
+ * Typography
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em auto;
+	font-family: 'Playfair Display', Georgia, Times, serif;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #66615e;
+}
+h1 { font-size: 2.4em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
+
+main a, footer a {
+	color: #beb6b0;
+}
+main a:hover, footer a:hover {
+	color: #66615e;
+}
+
+/*
+ * Grid
+ */
+
+.row:after, .container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+@media (min-width: 1024px) {
+	.container {
+		width: 80%;
+	}
+}
+.col-full, .col-half, .col-one-third, .col-two-thirds, .col-one-fourth, .col-three-fourths {
+	float: left;
+	width: 100%;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+@media (min-width: 800px) {
+	.col-full          { width: 100%; }
+	.col-half          { width: 50%; }
+	.col-one-third     { width: 33.333333%; }
+	.col-two-thirds    { width: 66.666666%; }
+	.col-one-fourth    { width: 25%; }
+	.col-three-fourths { width: 75%; }
+}
+
+/*
+ * Header
+ */
+
+.site-header {
+	margin: 2em auto;
+}
+@media (max-width: 800px) {
+	.site-header {
+		text-align: center;
+	}
+}
+.site-header__branding {
+	display: inline-block;
+}
+@media (max-width: 800px) {
+	.site-header__branding {
+		float: none;
+		width: auto;
+	}
+}
+.site-header__branding:hover {
+	opacity: .7;
+}
+.site-header__logo {
+	float: left;
+	margin: .3em .6em 0em 0;
+	width: 3.5em;
+	height: 3.5em;
+}
+.site-header__title {
+	float: left;
+	margin: 0;
+	font-size: 2.4em;
+	color: #383432;
+}
+.site-header__subtitle {
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-size: .4em;
+	font-style: normal;
+	font-weight: 400;
+	color: #beb6b0;
+}
+
+.site-navigation {
+	margin-top: .2em;
+	font-size: 1.1em;
+}
+@media (min-width: 800px) {
+	.site-navigation {
+		text-align: right;
+	}
+}
+.site-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.site-navigation li {
+	display: block;
+	float: left;
+	width: 50%;
+}
+@media (min-width: 560px) {
+	.site-navigation li {
+		display: inline-block;
+		float: none;
+		margin: 0 1em;
+		width: auto;
+	}
+}
+.site-navigation__item {
+	display: block;
+	padding: .8em 1em;
+	font-family: 'Playfair Display', Georgia, Times, serif;
+	font-weight: 700;
+}
+.site-navigation__item:hover, .site-navigation__item.current {
+	color: #beb6b0;
+}
+
+/*
+ * Footer
+ */
+
+.site-footer {
+	margin: 4em auto 1em;
+	font-size: .9em;
+	color: #beb6b0;
+}
+.site-footer__links {
+	text-align: right;
+}
+
+/*
+ * Home
+ */
+
+.home__intro {
+	float: none;
+	max-width: 25em;
+	margin: 0 auto;
+	padding: 1em;
+	font-size: 1.4em;
+	font-style: italic;
+	line-height: 1.3;
+	text-align: center;
+	color: #66615e;
+}
+@media (min-width: 800px) {
+	.home__intro {
+		padding: 4em 0;
+	}
+}
+.home__intro-flourish {
+	margin-top: .3em;
+	font-style: normal;
+	font-weight: bold;
+	color: #beb6b0;
+}
+.home__featured-music {
+	height: 315px;
+}
+.home__youtube-channel {
+	text-align: right;
+}
+
+/*
+ * Demo Reel
+ */
+
+.demo__embed {
+	height: 370px;
+}
+
+/*
+ * About
+ */
+
+.about__photo {
+	margin-bottom: 2em;
+	box-shadow: 0 .5em 1.5em rgba(0,0,0,.1);
+}
+@media (min-width: 800px) {
+	.about__photo {
+		float: right;
+		width: 50%;
+		height: auto;
+		margin: 0 0 1em 1em;
+	}
+}
