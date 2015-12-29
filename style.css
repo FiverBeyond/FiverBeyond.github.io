@@ -114,10 +114,10 @@ h4 { font-size: 1.8em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
 
-main a, footer a {
+p a {
 	color: #beb6b0;
 }
-main a:hover, footer a:hover {
+p a:hover, p a:focus {
 	color: #66615e;
 }
 
@@ -177,6 +177,7 @@ main a:hover, footer a:hover {
 }
 .site-header__branding:hover, .site-header__branding:focus {
 	opacity: .7;
+	will-change: opacity;
 }
 .site-header__logo {
 	float: left;
@@ -258,6 +259,7 @@ main a:hover, footer a:hover {
 }
 .site-footer__links a:hover, .site-footer__links a:focus {
 	opacity: 1;
+	will-change: opacity;
 }
 @media (min-width: 800px) {
 	.site-footer__links {
@@ -298,13 +300,43 @@ main a:hover, footer a:hover {
 	font-weight: bold;
 	color: #beb6b0;
 }
+
 .home__featured-music {
-	height: 315px;
+	height: 16em;
+	min-height: 315px;
 }
-@media (min-width: 800px) {
-	.home__youtube-channel {
-		text-align: right;
-	}
+
+.home__youtube-channel-block {
+	position: relative;
+	display: block;
+	height: 16em;
+	color: #fff;
+	background-color: #222;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.home__youtube-channel-cta {
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	padding: 1.5em;
+}
+.home__youtube-channel-image {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	max-height: 80%;
+	border-radius: 10px;
+	opacity: .5;
+	transition: opacity .4s linear;
+	-webkit-transition: opacity .4s linear;
+}
+.home__youtube-channel-block:hover .home__youtube-channel-image, .home__youtube-channel-block:focus .home__youtube-channel-image {
+	opacity: 1;
+	will-change: opacity;
 }
 
 /*
@@ -345,6 +377,7 @@ main a:hover, footer a:hover {
 }
 .about__resume-icon a:hover {
 	opacity: 1;
+	will-change: opacity;
 }
 
 /*
