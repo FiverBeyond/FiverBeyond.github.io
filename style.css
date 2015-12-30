@@ -1,6 +1,7 @@
-/*
+/* ==================================
  * Resets
- */
+ * ================================== */
+
 html {
 	box-sizing: border-box;
 	-ms-text-size-adjust: 100%;
@@ -54,9 +55,9 @@ input[type="checkbox"], input[type="radio"] {
 	padding: 0;
 }
 
-/*
- * Base
- */
+/* ==================================
+ * Base & Typography
+ * ================================== */
 
 body {
 	font-family: 'Libre Baskerville', Georgia, Times, serif;
@@ -95,10 +96,6 @@ body {
 	}
 }
 
-/*
- * Typography
- */
-
 h1, h2, h3, h4, h5, h6 {
 	margin: 1em auto;
 	font-family: 'Playfair Display', Georgia, Times, serif;
@@ -121,9 +118,9 @@ p a:hover, p a:focus {
 	color: #66615e;
 }
 
-/*
+/* ==================================
  * Grid
- */
+ * ================================== */
 
 .row:after, .container:after {
 	content: "";
@@ -154,9 +151,9 @@ p a:hover, p a:focus {
 	.col-three-fourths { width: 75%; }
 }
 
-/*
+/* ==================================
  * Header
- */
+ * ================================== */
 
 .site-header {
 	margin: 2em auto;
@@ -236,9 +233,9 @@ p a:hover, p a:focus {
 	color: #beb6b0;
 }
 
-/*
+/* ==================================
  * Footer
- */
+ * ================================== */
 
 .site-footer {
 	margin: 4em auto 1em;
@@ -274,9 +271,9 @@ p a:hover, p a:focus {
 	}
 }
 
-/*
+/* ==================================
  * Home
- */
+ * ================================== */
 
 .home__intro {
 	float: none;
@@ -309,9 +306,9 @@ p a:hover, p a:focus {
 .home__youtube-channel-block {
 	position: relative;
 	display: block;
-	height: 16em;
+	height: 280px;
 	color: #fff;
-	background-color: #222;
+	background-color: #242323;
 	border-radius: 8px;
 	overflow: hidden;
 }
@@ -339,17 +336,9 @@ p a:hover, p a:focus {
 	will-change: opacity;
 }
 
-/*
- * Demo Reel
- */
-
-.demo__embed {
-	height: 24em;
-}
-
-/*
+/* ==================================
  * About
- */
+ * ================================== */
 
 .about__photo {
 	width: 100%;
@@ -381,9 +370,9 @@ p a:hover, p a:focus {
 	will-change: opacity;
 }
 
-/*
+/* ==================================
  * Contact page, forms
- */
+ * ================================== */
 
 label.hidden {
 	position: absolute !important;
@@ -425,4 +414,81 @@ textarea {
 }
 .button:hover, .button:focus {
 	background-color: #66615e;
+}
+
+/* ========================================
+ * ToneDen Soundcloud player styling tweaks
+ * ======================================== */
+
+.tdicon-td_logo-link {
+	display: none;
+}
+.td.player {
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	border: 0;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.td.player .scrubber-box {
+	height: 50px;
+}
+.td.player .playlist {
+	max-height: 150px !important;
+	border-bottom: 0;
+	overflow: auto;
+}
+@media (max-width: 800px) {
+	.td.player .playlist {
+		max-height: none !important;
+	}
+}
+.td.player .playlist-table tbody tr td {
+	font-size: 13px !important;
+	padding: 10px 20px 10px 0 !important;
+	border-bottom: 0;
+}
+.td.player .playlist-table tbody tr td:first-child {
+	padding-left: 15px !important;
+}
+.td.palyer .playlist-table tbody tr td div {
+	line-height: 1.4;
+}
+.td.player .playlist-social-icon {
+	font-size: 12px !important;
+	vertical-align: baseline !important;
+}
+.td.player .current-song-social-icon {
+	vertical-align: bottom;
+}
+.td.player .cover .cover-img {
+	line-height: 0;
+}
+.td.player .cover .cover-img img {
+	border-radius: 10px !important;
+}
+@media (min-width: 800px) {
+	.td.player .cover .cover-img img {
+		border-radius: 10px 10px 0 0 !important;
+		width: 100% !important;
+		max-height: none !important;
+		margin: 0 auto !important;
+	}
+}
+
+#home-featured .header, #home-featured .info {
+	display: none;
+}
+#home-featured .player {
+	min-height: 280px;
+}
+#home-featured .playlist-table tbody tr td {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+}
+.col-one-third .td.player .social, .col-one-third .td.player .info {
+	display: none;
+}
+.col-one-third .td.player .playlist-table {
+	min-height: 150px;
+	padding: 10px 0;
 }

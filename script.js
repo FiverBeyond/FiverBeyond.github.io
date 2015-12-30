@@ -1,5 +1,122 @@
-(function($) {
+/* ==================================
+ * ToneDen Soundcloud player init
+ * ================================== */
+ 
+(function() {
+	var script = document.createElement("script");
 
+	script.type = "text/javascript";
+	script.async = true;
+	script.src = "//sd.toneden.io/production/v2/toneden.loader.js"
+
+	var entry = document.getElementsByTagName("script")[0];
+	entry.parentNode.insertBefore(script, entry);
+}());
+
+ToneDenReady = window.ToneDenReady || [];
+ToneDenReady.push(function() {
+	ToneDen.configure({
+		soundcloudConsumerKey: 'f221823988a179428469eeada68307ea'
+	});
+
+	ToneDen.player.create({
+		dom: "#home-featured",
+		skin: "dark",
+		shrink: true,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/featured-tracks"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-adventure",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/adventure"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-action",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/action"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-childrens",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/childrens"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-ambience",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/ambience"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-comedy",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/comedy"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-horror",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/horror"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-puzzle",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/puzzling"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-arrangements",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/arrangements"
+		]
+	});
+	ToneDen.player.create({
+		dom: "#demo-vocals",
+		skin: "dark",
+		shrink: false,
+		tracksPerArtist: 10,
+		urls: [
+			"https://soundcloud.com/evan-witt/sets/vocals"
+		]
+	});
+});
+
+
+/* ==================================
+ * Tabbed section/pages functionality
+ * ================================== */
+
+(function($) {
     $.organicTabs = function(el, options) {
 
         var base = this;
@@ -136,3 +253,8 @@
 	};
 
 })(jQuery);
+
+// Initialize
+$(function() {
+	$("#js-main").organicTabs();
+});
