@@ -66,7 +66,7 @@ body {
 	line-height: 1.6;
 	color: #383432;
 	background-color: #f5f2ed;
-	background-image: url('images/background.png');
+	background-image: url('images/background.jpg');
 	background-position: center top;
 }
 
@@ -441,6 +441,10 @@ textarea {
 	.td.player .playlist {
 		max-height: none !important;
 	}
+}
+.td.player .playlist-table tbody tr, .td.player .volume-init {
+	transition: opacity .4s ease-out;
+	-webkit-transition: opacity .4s ease-out;
 }
 .td.player .playlist-table tbody tr td {
 	font-size: 13px !important;
