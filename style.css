@@ -225,7 +225,7 @@ p a:hover, p a:focus {
 }
 .site-navigation__item {
 	display: block;
-	padding: .7em .9em;
+	padding: .5em .7em;
 	font-family: 'Playfair Display', Georgia, Times, serif;
 	font-weight: 700;
 }
