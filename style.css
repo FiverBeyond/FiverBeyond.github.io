@@ -25,6 +25,7 @@ main, details, summary, aside, figcaption, figure, header, footer, nav, menu, se
 	display: block;
 }
 a {
+	
 	text-decoration: none;
 	color: #5C9FB5;
 	transition: color .4s linear, opacity .4s linear;
